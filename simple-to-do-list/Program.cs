@@ -15,13 +15,13 @@ namespace simple_to_do_list
 
             while (isRunning)
             {
-                Console.WriteLine("\nCommands: Add, Delete, Edit, View, Mark & Quit");
+                Console.WriteLine("\nCommands: Add, Delete, Edit, View & Quit");
 
                 string userInput = Console.ReadLine();
 
                 if (userInput == "Add")
                 {
-                    Console.WriteLine("Please add a new task:");
+                    Console.WriteLine("\nPlease add a new task:");
 
                     string addTask = Console.ReadLine();
 
@@ -31,7 +31,7 @@ namespace simple_to_do_list
                 }
                 else if (userInput == "Delete")
                 {
-                    Console.WriteLine("Please enter index");
+                    Console.WriteLine("\nPlease enter index");
 
                     int index = Convert.ToInt32(Console.ReadLine());
 
@@ -41,7 +41,7 @@ namespace simple_to_do_list
                 }
                 else if (userInput == "Edit")
                 {
-                    Console.WriteLine("Enter index you'd like to edit:");
+                    Console.WriteLine("\nEnter index you'd like to edit:");
 
                     int index = Convert.ToInt32(Console.ReadLine());
 
@@ -53,14 +53,12 @@ namespace simple_to_do_list
                 }
                 else if (userInput == "View")
                 {
+                    Console.WriteLine("\nHere are your tasks:");
+
                     foreach (string task in tasks)
                     {
-                        Console.WriteLine(task);
+                        Console.WriteLine("- " + task);
                     }
-                }
-                else if (userInput == "Mark")
-                {
-
                 }
                 else if (userInput == "Quit")
                 {
